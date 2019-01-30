@@ -3,7 +3,7 @@ import pygame
 from pygame.sprite import Group
 from settings import Settings
 from ship import Ship
-from game_functions import check_events, update_screen, update_bullets, create_fleet
+from game_functions import check_events, update_screen, update_bullets, create_fleet, update_aliens
 
 def run_game():
   # Initialize game and create a screen object.
@@ -28,8 +28,11 @@ def run_game():
     # Update the location of the ship
     ship.update()
 
+    # Update the movement of the aliens
+    update_aliens(settings, aliens)
+
     # Update bullets
-    update_bullets(bullets)
+    update_bullets(aliens, bullets)
 
     # Redraw the screen during each pass through the loop.
     update_screen(settings, screen, ship, aliens, bullets)

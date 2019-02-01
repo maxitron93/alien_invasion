@@ -1,5 +1,4 @@
-# Alien Invasion with Python
-## A game made with pygame - python practice
+# Alien Invasion with Python and pygame
 ### A follow along project from [Python Crash Course](https://nostarch.com/pythoncrashcourse/)
 
 ### Python programming concepts used in this project:
